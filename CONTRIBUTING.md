@@ -1,40 +1,22 @@
 
-Things that would help:
+# Contributing
 
-1) If you've tried to build your own cyber-dojo from the github source repos
-(and maybe do some development) I'd really appreciate knowing what worked,
-what didn't, was easy, what was hard, and what I could do to make it easier
-for you.
+:+1::tada: Thanks for thinking about contributing! :tada::+1:
 
-2) Help reduce the [test] response time for some of the C/C++ test-frameworks.
-For example,
-[C++ (clang),GoogleMock](https://github.com/cyber-dojo-languages/clangplusplus-googlemock)
-does a crude [make --always-make] in its
-[cyber-dojo.sh file](https://github.com/cyber-dojo-languages/clangplusplus-googlemock/blob/master/start_point/cyber-dojo.sh).
-This is because when the makefiles were written the runner was stateless.
-But there is now a  [stateful runner](https://github.com/cyber-dojo/runner)
-so dropping the --always-make, and editing the makefile appropriately should help.
+The cyber-dojo source is split across three github organizations.
 
-3) Help reduce the [test] response time for Java test-frameworks.
-For example,
-[Java,JUnit](https://github.com/cyber-dojo-languages/java-junit)
-has a crude
-[cyber-dojo.sh file](https://github.com/cyber-dojo-languages/java-junit/blob/master/start_point/cyber-dojo.sh)
-which starts with [rm -f *.class] and can surely be improved.
+- [cyber-dojo](https://github.com/cyber-dojo)
+  - contains 20+ git repositories, one for each service that together comprise the server.
+  - you create new practice sessions by choosing from a set of start-points, one for each language+testFramework (eg `"Java, JUnit"`).
+  - [I'd like to contribute to the server](https://github.com/cyber-dojo/cyber-dojo/blob/master/docs/how-to-contribute-to-server.md)
 
-4) The [Dockerfiles](https://docs.docker.com/engine/reference/builder/) used
-to create the language start-point images are based on either
-[Alpine Linux](https://alpinelinux.org/) or
-[Ubuntu](https://www.ubuntu.com/).
-For example, the [C,assert] Alpine based image is 96MB.
-For example, the [C++ (clang),assert] Ubuntu based image is 1.7GB.
-Converting Ubuntu based images to smaller Alpine based images would be nice.
+- [cyber-dojo-start-points](https://github.com/cyber-dojo-start-points)
+  - contains 80+ git repositories, one for each language+testFramework `start-point`.
+  - for example, the start-point files for `"Java, JUnit"` live in [https://github.com/cyber-dojo-start-points/java-junit](https://github.com/cyber-dojo-start-points/java-junit).
+  - each one specifies its initial source files and the name of the docker image they run inside.
+  - [I'd like to contribute to the start-points](https://github.com/cyber-dojo/cyber-dojo/blob/master/docs/how-to-contribute-to-start-points.md)
 
-5) [New exercises](https://github.com/cyber-dojo/start-points-exercises)
-
-6) Figure out how to fix the broken Dockerfile for
-[javascript+cucumber](https://github.com/cyber-dojo-languages/javascript-cucumber)
-
-7) Figure out how to fix the broken Dockerfile for
-[elm+test](https://github.com/cyber-dojo-languages/elm-test)
-
+- [cyber-dojo-languages](https://github.com/cyber-dojo-languages)
+  - contains 80+ git repositories, one for each language+testFramework docker `image`.
+  - for example, the Dockerfile for `"Java, JUnit"` lives in [https://github.com/cyber-dojo-languages/java-junit](https://github.com/cyber-dojo-languages/java-junit).
+  - [I'd like to contribute to the languages](https://github.com/cyber-dojo/cyber-dojo/blob/master/docs/how-to-contribute-to-languages.md)
